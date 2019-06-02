@@ -17,7 +17,11 @@ public class AutoDriver {
     // MODIFIES: SpeedRegulator
     // EFFECTS: for seconds iterations, slows down if too close to object in front
     public void driveForward(int seconds){
-
+        for (int i = 0; i < seconds; i++) {
+            if (frontSensor.tooClose()) {
+                speedRegulator.slowDown();
+            }
+        }
     }
 
 
