@@ -3,6 +3,8 @@ package model;
 import ui.SelfDrivingCar;
 
 public class AutoDriver {
+    private FrontSensor frontSensor;
+    private SpeedRegulator speedRegulator;
 
     public AutoDriver(SelfDrivingCar car) {
         frontSensor = car.getFrontSensor();
